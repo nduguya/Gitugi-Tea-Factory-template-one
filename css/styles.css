@@ -237,7 +237,7 @@ section{
 .navbar a{
           /*@include titleText(2rem);*/
 
-          font-size: 2rem;
+          font-size: 2.2rem;
           font-weight: 600;
           color: var(--white);
           text-transform: capitalize;
@@ -415,7 +415,7 @@ section{
             background: linear-gradient(90deg,--white),transparent;
         }
          
-        .content{
+      .home .content{
             width: 100%;
             position:relative;
             justify-content: flex-end;
@@ -553,14 +553,14 @@ section{
             flex:1 1 41rem;
 }
 .about .row .content h3{
-                font-size: 4rem;
+                font-size: 3rem;
                 color: var(--black);
                 text-transform: capitalize;
 
             }
 
 .about .row .content p{
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 padding:1rem 0;
                 color: var(--light-color);
                 line-height: 1.5;
