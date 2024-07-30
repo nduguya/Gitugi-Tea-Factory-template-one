@@ -151,7 +151,7 @@ section{
     
 
 }
-.btn hover:{
+.btn :hover{
         background: var(--yellow);
         color:var(--white);
     }
@@ -1036,10 +1036,330 @@ section{
 /*subscribe ends*/
 
 
+/*service section starts*/
+
+/*services*/
+.service{
+    background-color: #dddada;
+    padding: 4em 0;
+    margin: 4em auto;
+}
+.column{
+    display: grid;
+}
+
+.containeryies{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.service-cards{
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: clamp(2em, 5vw, 5em);
+    padding-top: 4em;
+}
+
+.service h2,h3{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.s-card{
+    padding: 4em 2em;
+    text-align: center;
+    box-shadow: 0 0 37px -2px rgba(17,24,39,0.05);
+    border-radius: 5px;
+}
+
+.s-card:nth-of-type(odd){
+    background: #0df805;
+}
+
+.s-card:nth-of-type(odd):hover{
+    background: #153514;
+}
+
+.s-card:nth-of-type(even){
+    background: #153514;
+}
 
 
+.s-card:nth-of-type(even):hover{
+    background: #0df805;
+}
+
+.icon{
+    position: relative;
+    padding: 0.5em;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.icon::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     margin: auto;
+     width: 100%;
+     height: 1px;
+}
+
+.s-card:nth-of-type(odd) .icon::after{
+    background: var(--cl--4--);
+}
+
+.s-card:nth-of-type(even) .icon::after,
+.s-card:nth-of-type(odd):hover .icon::after{
+    background: var(--cl--1--);
+}
+
+.s-card h4{
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 0.5em;
+}
+
+.s-card:nth-of-type(odd) h4,
+.s-card:nth-of-type(even):hover h4{
+    color: var(--cl--3--);
+}
 
 
+.s-card:nth-of-type(even) h4,
+.s-card:nth-of-type(odd):hover h4{
+    color: var(--cl--1--);
+}
+
+@media screen and(min-width:1300px) {
+    .containeryies{
+        max-width: 1215px;
+    }
+}
+
+
+/*contact*/
+.containi{
+    max-width: 1500px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    background: #fff;
+}
+
+.gridi{
+    display: grid;
+}
+
+.sectioni{
+    padding: 4.5rem 0 2rem;
+}
+ 
+.section__title{
+    font-size: 1.89rem;
+    margin-bottom: 1rem;
+}
+
+.section__title span{
+    color: goldenrod;
+}
+
+.section__subtitle{
+    display: block;
+    font-size: .813rem;
+    color: #153514;
+}
+
+/*==================CONTACT=====================*/
+.contact__container{
+    row-gap: 2rem;
+}
+
+.contact__images{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__orbe{
+    width: 266px;
+    height: 300px;
+    background-color: hsl(228, 24%, 97%);
+    border-radius: 135px 135px 16px 16px;
+}
+
+
+.contact__img{
+    position: absolute;
+    width: 250px;
+    height: 288px;
+    overflow:hidden;
+    border-radius: 125px 125px 12px 12px;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+.contact__description{
+    font-size: .913rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact__card{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem .75rem;
+}
+
+.contact__card-box{
+    background-color: #fff;
+    border: 2px solid #ffffff;
+    padding: 1.25rem .75rem;
+    border-radius: .5rem;
+    transition: .3s;
+    
+}
+
+.contact__card-info{
+    display: flex;
+    align-items: flex-start;
+    column-gap: .75rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact__card i{
+    padding: 6px;
+    background-color:#153514;
+    border-radius: 6px;
+    font-size: 1.25rem;
+    color: #0df805;
+}
+
+.contact__card-title{
+    font-size: 2.23rem;
+}
+
+.contact__card-description{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.contact__card-button{
+    font-size: .813rem;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: .25rem;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.contact__card-button:hover{
+    background-color: goldenrod;
+    color: #000;
+}
+
+.contact__card-box:hover{
+    box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1);
+}
+
+@media screen and (max-width:350px) {
+    .containi{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .contact__card{
+        grid-template-columns: repeat(1,180px);
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+
+    
+    .contact__img{
+        width: 220px;
+        height: 260px;
+    }
+
+    .contact__orbe{
+          width: 256px;
+          height: 280px;
+    }
+
+
+}
+
+
+@media screen and (min-width:576px) {
+    .contact__card{
+        grid-template-columns: repeat(2,192px);
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width:767px) {
+    .contact__container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+       }
+    
+       .contact__images{
+        order: 1;
+       }
+       .contact__card{
+        justify-content: initial;
+       }
+}
+
+@media screen and (min-width:1023px) {
+    .section__title{
+        font-size: 2.25rem;
+     }
+     .section__subtitle{
+        font-size: var(--normal-font-size);
+     }
+     .contact__container{
+        align-items: center;
+        column-gap: 5rem;
+    }
+    .contact__orbe{
+        width: 501px;
+        height: 641px;
+        border-radius: 258px 258px 16px 16px;
+    }
+    .contact__img{
+        width: 461px;
+        height: 601px;
+        border-radius: 238px 238px 12px 12px;
+    }
+    .contact__img img{
+        max-width: initial;
+       width: 490px;
+    }
+    .contact__description{
+        font-size: var(--normal-font-size);
+        margin-bottom: 2.5rem;
+    }
+    .contact__card{
+        grid-template-columns: repeat(2,200px);
+    }
+
+    .contact__card-box{
+        padding: 28px 1.5rem 1.5rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1040px) {
+    .containi{
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 /*courses*/
 
@@ -1067,7 +1387,7 @@ section{
   padding-bottom: 1rem;
   font-weight: bolder;
 }
-
+}
 /*.tablet-course{
     visibility: hidden;
 }*/
@@ -1286,11 +1606,11 @@ footer{
             clip-path: polygon(0 0,100% 0,100% 0,0 0);
             transition:.2s linear;
 
-    }
-            .header .navbar.active{
+
+            &.active{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
-        
+        }
 
             .header .navbar   a{
                 display: block;
